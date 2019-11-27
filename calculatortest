@@ -1,0 +1,37 @@
+#debil calculator v3
+from colorama import init
+from colorama import Fore, Back, Style
+
+# use Colorama to make Termcolor work on Windows too
+init()
+print(Fore.BLACK)
+print(Back.GREEN)
+
+what = input("Что будем делать? (+, -, /, *, (помощь - help)): ")
+
+print(Back.CYAN)
+
+a = float( input("Первое число: ") )
+b = float( input("Второе число: ") )
+
+print(Back.YELLOW)
+
+if what == "+":
+	c = a + b
+	print("Результат: " + str(c))
+elif what == "-":
+	c = a - b
+	print("Результат: " + str(c))
+elif what == "/":
+	c = a / b
+	print("Результат: " + str(c))
+elif what == "*":
+	c = a * b
+	print("Результат: " + str(c))
+elif what == "help":
+	c = a * b
+	print("+ - сложение\n- - вычитание\n/ - деление\n* - умножение")
+else:
+	print("Выбрана неверная операция!!!")
+
+input()
